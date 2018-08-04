@@ -1,13 +1,3 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var div = document.querySelector("#firstDiv");
 var h1 = document.createElement("h1");
 h1.innerHTML = "Initial Commit";
@@ -21,10 +11,21 @@ var Contact = /** @class */ (function () {
     }
     return Contact;
 }());
-var ContantManager = /** @class */ (function (_super) {
-    __extends(ContantManager, _super);
+var ContantManager = /** @class */ (function () {
     function ContantManager() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        this.contactList = [];
     }
+    ContantManager.prototype.add = function (contact) {
+        this.contactList.push(contact);
+    };
+    ContantManager.prototype.removeLast = function () {
+        this.contactList.pop();
+    };
+    ContantManager.prototype.removeSpecificContact = function (contact) {
+        var index = this.getContactIndex(contact);
+    };
+    ContantManager.prototype.getContactIndex = function (contact) {
+        return 0;
+    };
     return ContantManager;
-}(Contact));
+}());

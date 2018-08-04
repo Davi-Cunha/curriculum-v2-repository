@@ -5,7 +5,7 @@
     $ sass --watch ./sass/main.sass:./css/main.css
 
 # NODE-SASS compilation command
-    $ node-sass -o css css
+    $ node-sass sass/ -o css/
 
 # NODE-SASS watch compilation command
-    $ node-sass -o css css -w
+    $ node-sass sass/ -o css/ -w

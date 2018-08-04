@@ -16,6 +16,25 @@ class Contact {
     }
 }
 
-class ContantManager extends Contact{
-    
+class ContantManager {
+    contactList: any[];
+    constructor() {
+        this.contactList = [];
+    }
+
+    add(contact) {
+        this.contactList.push(contact);
+    }
+
+    removeLast() {
+        this.contactList.pop();
+    }
+
+    removeSpecificContact(contact) {
+        let index: number = this.getContactIndex(contact);
+    }
+
+    getContactIndex(contact): number {
+        return 0;
+    }
 }
