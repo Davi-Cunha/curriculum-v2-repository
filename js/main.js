@@ -1,7 +1,10 @@
-var div = document.querySelector("#firstDiv");
-var h1 = document.createElement("h1");
-h1.innerHTML = "Initial Commit";
-div.appendChild(h1);
+var backgroundVideo = document.querySelector("#background-video");
+var titleWrap = document.querySelector("#title-wrap");
+var videoHeight;
+backgroundVideo.addEventListener('loadedmetadata', function () {
+    videoHeight = backgroundVideo.videoHeight;
+    console.log(videoHeight);
+});
 var Contact = /** @class */ (function () {
     function Contact(name, email, phone, id) {
         this.name = name;

@@ -1,7 +1,11 @@
-let div = document.querySelector("#firstDiv");
-let h1 = document.createElement("h1");
-h1.innerHTML = "Initial Commit";
-div.appendChild(h1);
+let backgroundVideo: any = document.querySelector("#background-video");
+let titleWrap: any = document.querySelector("#title-wrap");
+let videoHeight: number;
+
+backgroundVideo.addEventListener('loadedmetadata', () => {
+    videoHeight = backgroundVideo.videoHeight;
+    console.log(videoHeight);
+});
 
 class Contact {
     name: string;
@@ -38,3 +42,5 @@ class ContantManager {
         return 0;
     }
 }
+
+
